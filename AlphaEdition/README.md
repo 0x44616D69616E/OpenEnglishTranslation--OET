@@ -29,7 +29,7 @@ This is a **register layer on the Readers’ Version**, not a remake of the Lite
 
 ```
 python3 AlphaEdition/scripts/alpha_tools.py validate   # checks only
-python3 AlphaEdition/scripts/alpha_tools.py all        # validate, render Markdown, rebuild the reader
+python3 AlphaEdition/scripts/alpha_tools.py all        # validate, render Markdown, rebuild the reader  (also writes site/index.html for hosting)
 ```
 
 Python 3.8+, standard library only. `validate` fails on any change to chapter/verse/paragraph structure, cross-references or digit numbers, on malformed footnotes, on any banned slang term, and on any slang that lacks a plain-word fallback (`\zs alpha|plain\zs*`). It also reports Flesch–Kincaid readability for the OET-RV, Alpha and Plain text.

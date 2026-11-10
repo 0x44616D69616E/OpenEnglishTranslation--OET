@@ -555,6 +555,11 @@ def cmd_reader(args):
     target = READER_DIR / "alpha_reader.html"
     target.write_text(html, encoding="utf-8")
     print(f"wrote {target} ({len(html) / 1024:.0f} KB)")
+    # Deployable copy for static hosting (Cloudflare Pages: output dir AlphaEdition/site)
+    site = READER_DIR.parent / "site"
+    site.mkdir(exist_ok=True)
+    (site / "index.html").write_text(html, encoding="utf-8")
+    print(f"wrote {site / 'index.html'}")
     return 0
 
 
