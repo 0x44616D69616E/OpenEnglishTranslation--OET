@@ -1,0 +1,28 @@
+term	plain_meaning	tier	basis	note
+cooked	finished; done for	use	sourced: Mental Floss 2026 (contrasts it with "chopped")	Always paired with a plain-word context clue or a Decoder footnote. Never in God's own speech.
+crash out / crashing out	have a full emotional meltdown	use	sourced: Mental Floss 2026; Euronews 2026	Fits angry-prophet scenes (Jonah 4). Not for grief or lament.
+aura / aura points	effortless coolness; social standing	use	sourced: Mental Floss 2026	Narrator-voice joke only. "Aura farming" (faking it) is a separate, negative term; not used.
+ate	did something exceptionally well	use	sourced: Mental Floss 2026	Often credited to Black and queer culture (general knowledge; the NBC piece in STYLE_GUIDE names "slay" and "periodt," not "ate"). Use sparingly and with context. Ordinary English word too, so the validator does not count it.
+mid	mediocre	use	sourced: Mental Floss 2026	Narrator voice, low stakes.
+no cap / cap	"for real" / a lie	use	sourced: Mental Floss 2026; Euronews 2026	Origin is African American English (NBC). Do not imitate AAVE grammar; vocabulary only.
+maxxing	going all-in on something	use	sourced: Dictionary.com 2026 Word of the Year (via Euronews); Mental Floss 2026	Compound with a noun (sackcloth-maxxing). Its roots include "looksmaxxing" in manosphere communities; use only the neutral, general sense.
+unc	older guy; out of touch, sometimes admired	use	sourced: Mental Floss 2026; Dictionary.com 2026 shortlist	Good for self-deprecating older speakers (Paulos, Phm 9). Always with Decoder footnote.
+larp / larping	pretending to be something you're not	use	sourced: Mental Floss 2026 (gaming origin)	Fits false-piety scenes. Not used in the pilot books.
+delulu	delusional; unrealistically hopeful	use	sourced: Mental Floss 2026	Mixed connotation; context decides.
+locked in	fully focused	use	author judgment (not confirmed in fetched sources; verify before wider use)	Common in current teen speech; short shelf life likely.
+respawn	come back after being defeated (video games)	use	author judgment; gaming vocabulary is a documented source of Gen Alpha slang (larp, Roblox memes)	Needs Decoder footnote for readers who don't game.
+side quest / main quest	optional task / the central task	use	author judgment (gaming vocabulary)	Not used in the pilot books.
+rizz	charm, flirting skill	use-with-gloss	sourced: Mental Floss 2026; Aleksic (popularised by Kai Cenat); Oxford 2023 Word of the Year (general knowledge)	Romantic connotation; rarely fits Scripture. Not used in the pilot books.
+brain rot	mental fog from endless low-quality short video; also the absurd content itself	use-with-gloss	sourced: Science of People summary; Oxford 2024 Word of the Year (general knowledge)	Describe, don't imitate: this edition does not write in brainrot.
+6-7	deliberately meaningless shout, often with a hand gesture	avoid	sourced: CBS News; Dictionary.com 2025 Word of the Year	Meaning is "no meaning." Using it as a translation would add noise, not content. May appear in documentation as an example only.
+skibidi	meaningless in-joke from a YouTube series	avoid	sourced: Aleksic (Science Friday)	No translation value; extremely dated by publication.
+unalive	euphemism for kill/die, created to dodge platform moderation	avoid	sourced: Aleksic (Science Friday); algospeak literature	Scripture has deaths, killings and suicide-adjacent lines. Euphemism would trivialise them. Use plain words.
+chud	insult for a fool or aggressive man; politically charged	avoid	sourced: Mental Floss 2026 (flagged contested)	Political insult. Not a neutral translation tool.
+bop	misogynistic insult (older meaning: a catchy song)	avoid	sourced: Mental Floss 2026 (flagged contested/harmful)	Do not use.
+sigma	independent loner type; from manosphere culture	avoid	sourced: Mental Floss 2026 (flagged contested)	Do not use.
+huzz	attractive woman/women, cheeky; can offend	avoid	sourced: Mental Floss 2026 (flagged contested)	Do not use.
+foid	severely offensive, dehumanising term for women	avoid	sourced: Mental Floss 2026 (flagged most concerning)	Do not use. Listed only so the validator catches it.
+mogging / mog	outdoing someone in looks or physique	avoid	sourced: Mental Floss 2026; Euronews 2026 (looksmaxxing roots in manosphere/incel communities, per Euronews)	Appearance-ranking culture. Not used.
+glazing	insincere flattery	avoid	sourced: Mental Floss 2026	Fine word, no good fit in the pilot books. Moved to avoid to keep density low; revisit for Proverbs/Psalms flattery verses.
+clanker	insult for AI and robots	avoid	sourced: Mental Floss 2026	Slur-shaped; no use here.
+gyatt	sexualised exclamation	avoid	author judgment	Sexualised; do not use.

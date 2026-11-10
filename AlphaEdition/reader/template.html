@@ -1,0 +1,317 @@
+<title>OET Alpha Edition</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* Layout concept: a printed study Bible crossed with a group chat's margin notes.
+   One reading column; slang is a highlighter mark you can flip back to plain words;
+   a compare view lines the Alpha text up against the OET-RV, verse for verse. */
+:root {
+  --bg: #F2F5F8;
+  --surface: #FFFFFF;
+  --ink: #13202C;
+  --muted: #586878;
+  --rule: #D3DBE3;
+  --mark: #FFE066;
+  --mark-ink: #13202C;
+  --decoder: #0B7A85;
+  --decoder-bg: #E1F4F6;
+  --nerd: #4A4FD0;
+  --nerd-bg: #E9EAFB;
+  --focus: #1B5FD6;
+  --bar-rv: #8794A2;
+  --f-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-text: "Newsreader", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F151B; --surface: #161E26; --ink: #E7EDF2; --muted: #97A6B4; --rule: #273340;
+    --mark: #54450F; --mark-ink: #FFF3C2; --decoder: #58C4CE; --decoder-bg: #10303A;
+    --nerd: #A5A9FF; --nerd-bg: #1E2150; --focus: #7FB0FF; --bar-rv: #6F7E8D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F151B; --surface: #161E26; --ink: #E7EDF2; --muted: #97A6B4; --rule: #273340;
+  --mark: #54450F; --mark-ink: #FFF3C2; --decoder: #58C4CE; --decoder-bg: #10303A;
+  --nerd: #A5A9FF; --nerd-bg: #1E2150; --focus: #7FB0FF; --bar-rv: #6F7E8D;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-text);
+  font-size: 1.125rem;
+  line-height: 1.62;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 30; background: var(--bg);
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+/* ---- control bar ---- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--bg); border-bottom: 1px solid var(--rule);
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+}
+.bar-inner { max-width: 1040px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
+.group { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.group > span { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); padding: 2px; }
+.seg button { border: 0; background: transparent; padding: 5px 13px; border-radius: 999px; font-family: var(--f-display); font-weight: 600; font-size: .88rem; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.switch { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--rule); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-family: var(--f-display); font-weight: 600; font-size: .88rem; }
+.switch i { width: 26px; height: 15px; border-radius: 999px; background: var(--rule); position: relative; display: inline-block; }
+.switch i::after { content: ""; position: absolute; top: 2px; left: 2px; width: 11px; height: 11px; border-radius: 50%; background: var(--surface); transition: transform .15s; }
+.switch[aria-pressed="true"] i { background: var(--decoder); }
+.switch[aria-pressed="true"] i::after { transform: translateX(11px); }
+
+/* ---- page ---- */
+main { max-width: 700px; margin: 0 auto; padding-top: 40px; }
+main.wide { max-width: 1040px; }
+.eyebrow { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+h1 { font-family: var(--f-display); font-weight: 800; font-size: clamp(2.1rem, 7vw, 3.5rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 6px; text-wrap: balance; }
+.subtitle { font-family: var(--f-display); color: var(--muted); font-size: 1.1rem; margin: 0 0 18px; }
+.intro p { margin: 0 0 14px; max-width: 65ch; }
+.hint { font-family: var(--f-display); font-size: .9rem; color: var(--muted); margin: 6px 0 0; }
+.hint mark { font-family: inherit; }
+
+.outline { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 22px 0 0; }
+.outline a { display: inline-flex; gap: 8px; align-items: baseline; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 7px 12px; font-family: var(--f-display); font-weight: 600; font-size: .9rem; }
+.outline a:hover { border-color: var(--ink); }
+.outline small { font-family: var(--f-mono); font-weight: 500; color: var(--muted); font-size: .72rem; }
+
+.chapter { margin-top: 56px; scroll-margin-top: 90px; }
+.chapter-label { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+h2 { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.4rem, 4.2vw, 1.9rem); line-height: 1.12; letter-spacing: -.01em; margin: 0 0 14px; text-wrap: balance; }
+h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.15rem; margin: 28px 0 8px; text-wrap: balance; }
+.sub { font-style: italic; color: var(--muted); margin: 0 0 8px; }
+p.text { margin: 0 0 14px; max-width: 65ch; }
+p.poetry { margin: 0 0 8px; padding-left: 20px; border-left: 3px solid var(--rule); max-width: 60ch; }
+sup.v { font-family: var(--f-mono); font-size: .62em; font-weight: 500; color: var(--muted); margin-right: 3px; vertical-align: .45em; }
+
+mark.demo { background: var(--mark); color: var(--mark-ink); padding: 0 .18em; border-radius: .25em; font-family: inherit; }
+mark.slang { background: var(--mark); color: var(--mark-ink); padding: 0 .18em; border-radius: .25em; box-decoration-break: clone; -webkit-box-decoration-break: clone; cursor: pointer; }
+mark.slang.flip { background: transparent; color: var(--ink); text-decoration: underline wavy var(--decoder); text-underline-offset: 3px; }
+mark.slang.gone { text-decoration: line-through; opacity: .6; }
+
+.nbtn { display: inline-grid; place-items: center; width: 1.45em; height: 1.45em; border-radius: 50%; border: 1.5px solid currentColor; background: transparent; padding: 0; margin: 0 2px; font-family: var(--f-mono); font-size: .62em; font-weight: 500; vertical-align: .28em; line-height: 1; }
+.nbtn.d { color: var(--decoder); } .nbtn.n { color: var(--nerd); }
+.nbtn[aria-expanded="true"].d { background: var(--decoder); color: var(--surface); }
+.nbtn[aria-expanded="true"].n { background: var(--nerd); color: var(--surface); }
+.notebox { display: block; margin: 8px 0 12px; padding: 10px 14px; border-radius: 10px; font-size: .95rem; line-height: 1.5; max-width: 62ch; }
+.notebox b { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; margin-right: 8px; }
+.nb-d { background: var(--decoder-bg); } .nb-d b { color: var(--decoder); }
+.nb-n { background: var(--nerd-bg); } .nb-n b { color: var(--nerd); }
+
+/* compare */
+.pair { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.pair .col { min-width: 0; }
+.pair .rv { color: var(--muted); font-size: 1rem; }
+.tag { display: inline-block; font-family: var(--f-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; padding: 1px 7px; border: 1px solid var(--rule); border-radius: 999px; margin-right: 8px; vertical-align: .15em; color: var(--muted); background: var(--surface); }
+@media (min-width: 760px) { .pair { grid-template-columns: 1fr 1fr; gap: 0 32px; } }
+
+/* checks + decoder index */
+.panel { margin-top: 64px; padding-top: 28px; border-top: 2px solid var(--ink); }
+.panel h2 { font-size: 1.3rem; }
+.bars { display: grid; gap: 8px; max-width: 520px; margin: 14px 0 6px; font-family: var(--f-display); font-size: .9rem; }
+.bar-row { display: grid; grid-template-columns: 62px 1fr 38px; gap: 10px; align-items: center; }
+.track { height: 14px; background: var(--rule); border-radius: 999px; overflow: hidden; }
+.fill { height: 100%; border-radius: 999px; }
+.fill.rv { background: var(--bar-rv); } .fill.alpha { background: var(--mark); box-shadow: inset 0 0 0 1.5px var(--ink); } .fill.plain { background: var(--decoder); }
+.bar-row b { font-family: var(--f-mono); font-weight: 500; text-align: right; font-size: .82rem; }
+.fine { font-family: var(--f-display); font-size: .86rem; color: var(--muted); max-width: 62ch; margin: 6px 0 0; }
+ul.facts { padding-left: 1.1em; margin: 14px 0; max-width: 62ch; }
+.scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; min-width: 480px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+details { margin-top: 18px; }
+summary { font-family: var(--f-display); font-weight: 600; cursor: pointer; }
+footer { max-width: 62ch; margin: 56px auto 0; font-family: var(--f-display); font-size: .86rem; color: var(--muted); }
+footer p { margin: 0 0 10px; }
+footer a { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .switch i::after { transition: none; } }
+</style>
+
+<header class="bar">
+  <div class="bar-inner">
+    <div class="group"><span>Book</span><div class="seg" id="books" role="group" aria-label="Book"></div></div>
+    <div class="group"><span>Voice</span>
+      <div class="seg" id="modes" role="group" aria-label="Voice">
+        <button type="button" data-mode="alpha" aria-pressed="true">Alpha</button>
+        <button type="button" data-mode="plain" aria-pressed="false">Plain</button>
+        <button type="button" data-mode="compare" aria-pressed="false">Side by side</button>
+      </div>
+    </div>
+    <button type="button" class="switch" id="notes" aria-pressed="true"><i aria-hidden="true"></i>Notes</button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const store = {
+  get() { try { return JSON.parse(localStorage.getItem("oet-alpha-reader") || "{}"); } catch (e) { return {}; } },
+  set(o) { try { localStorage.setItem("oet-alpha-reader", JSON.stringify(o)); } catch (e) {} }
+};
+const saved = store.get();
+const state = {
+  book: 0,
+  mode: ["alpha", "plain", "compare"].indexOf(saved.mode) >= 0 ? saved.mode : "alpha",
+  notes: saved.notes !== false
+};
+
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const md = (s) => esc(s).replace(/\*(.+?)\*/g, "<em>$1</em>");
+
+function segHTML(segs, mode) {
+  let out = "";
+  segs.forEach((g) => {
+    if (g.t === "text") out += esc(g.s);
+    else if (g.t === "para") out += "<br>";
+    else if (g.t === "zs") {
+      if (mode === "plain") out += esc(g.p);
+      else if (mode === "alpha" || mode === "compare") {
+        out += '<mark class="slang" tabindex="0" role="button" aria-label="Slang: ' + esc(g.a) + '. Press for the plain wording." data-a="' + esc(g.a) + '" data-p="' + esc(g.p) + '">' + esc(g.a) + "</mark>";
+      }
+    } else if (g.t === "note") {
+      if (!state.notes) return;
+      if (g.kind === "decoder" && mode === "plain") return;
+      const d = g.kind === "decoder";
+      out += '<button type="button" class="nbtn ' + (d ? "d" : "n") + '" aria-expanded="false" aria-label="' + (d ? "Decoder note" : "Nerd note") + '">' + (d ? "D" : "N") + "</button>" +
+             '<span class="notebox ' + (d ? "nb-d" : "nb-n") + '" hidden><b>' + (d ? "Decoder" : "Nerd note") + "</b>" + esc(g.s) + "</span>";
+    }
+  });
+  return out;
+}
+
+function renderBook() {
+  const b = DATA.books[state.book];
+  const app = document.getElementById("app");
+  const code = b.code.toLowerCase();
+  app.className = state.mode === "compare" ? "wide" : "";
+  let h = '<p class="eyebrow">OET Alpha Edition &middot; unofficial</p><h1>' + esc(b.title) + "</h1>";
+  if (b.subtitle) h = h.replace("<h1>", '<p class="subtitle">' + esc(b.subtitle) + "</p><h1>");
+  h += '<div class="intro">' + b.intro.map((p) => "<p>" + md(p) + "</p>").join("") + "</div>";
+  if (state.mode !== "plain") h += '<p class="hint">Tap a <mark class="demo">highlighted</mark> word for its plain wording. <span style="font-family:var(--f-mono)">D</span> = Decoder, <span style="font-family:var(--f-mono)">N</span> = Nerd note.</p>';
+  h += '<ul class="outline">' + b.outline.map((o, i) => '<li><a href="#' + code + "-" + (i + 1) + '">' + esc(o.text) + " <small>" + esc(o.ref) + "</small></a></li>").join("") + "</ul>";
+
+  b.chapters.forEach((c) => {
+    h += '<section class="chapter" id="' + code + "-" + c.n + '">';
+    let open = "", first = true;
+    const closeP = () => { if (open) { h += "</p>"; open = ""; } };
+    c.verses.forEach((v) => {
+      if (v.h) {
+        closeP();
+        if (first) h += '<p class="chapter-label">Chapter ' + c.n + "</p><h2>" + esc(v.h.a) + "</h2>";
+        else h += "<h3>" + esc(v.h.a) + "</h3>";
+      } else if (first) {
+        h += '<p class="chapter-label">Chapter ' + c.n + "</p>";
+      }
+      first = false;
+      if (v.sub) { closeP(); h += '<p class="sub">' + esc(v.sub) + "</p>"; }
+      if (state.mode === "compare") {
+        closeP();
+        h += '<div class="pair"><div class="col rv"><span class="tag">OET-RV</span><sup class="v">' + esc(v.n) + "</sup>" + esc(v.rv).replace(/\n/g, "<br>") +
+             '</div><div class="col"><span class="tag">Alpha</span><sup class="v">' + esc(v.n) + "</sup>" + segHTML(v.a, "compare") + "</div></div>";
+        return;
+      }
+      if (v.poetry) { closeP(); h += '<p class="poetry">'; open = "poetry"; }
+      else if (v.para || !open) { closeP(); h += '<p class="text">'; open = "text"; }
+      h += '<sup class="v">' + esc(v.n) + "</sup>" + segHTML(v.a, state.mode) + " ";
+    });
+    closeP();
+    h += "</section>";
+  });
+
+  h += checksPanel(b) + indexPanel(b, code);
+  h += '<footer><p>Based on the <a href="https://github.com/Freely-Given-org/OpenEnglishTranslation--OET" rel="noopener">Open English Translation Readers&rsquo; Version</a> by Robert Hunt / Freely-Given.org, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>. This edition is licensed the same way. Changes: register adaptation, rewritten introductions and headings, added footnotes, simplified markup.</p>' +
+       "<p>Not endorsed by the OET project. AI-assisted adaptation (the original is hand-made). A reading aid, not a study text: check the OET-RV and Literal Version for anything that matters. Slang ages fast, and so will this page.</p></footer>";
+  app.innerHTML = h;
+}
+
+function checksPanel(b) {
+  const k = b.checks || {}, fk = k.fk || { rv: 0, alpha: 0, plain: 0 };
+  const max = Math.max(fk.rv, fk.alpha, fk.plain, 10);
+  const row = (cls, lbl, val) => '<div class="bar-row"><span>' + lbl + '</span><div class="track"><div class="fill ' + cls + '" style="width:' + (100 * val / max).toFixed(1) + '%"></div></div><b>' + val.toFixed(1) + "</b></div>";
+  return '<section class="panel"><h2>How this was checked</h2>' +
+    '<ul class="facts"><li>' + (k.errors === 0 ? "No structural errors" : esc(k.errors) + " errors") + ": every chapter, verse, paragraph, poem line, cross-reference and number matches the OET-RV, verse for verse (" + esc(k.verses) + " verses).</li>" +
+    "<li>All " + esc(k.spans) + " slang uses in this book carry a plain-word fallback. That is what the Plain button shows.</li>" +
+    "<li>" + esc(k.footnotes) + " footnotes: " + esc(k.decoder) + " Decoder, " + esc(k.nerd) + " Nerd note. A Decoder note may only explain a word its verse actually uses.</li></ul>" +
+    '<div class="bars" role="img" aria-label="Reading grade level. OET-RV ' + fk.rv.toFixed(1) + ", Alpha " + fk.alpha.toFixed(1) + ", Plain " + fk.plain.toFixed(1) + '">' +
+    row("rv", "OET-RV", fk.rv) + row("alpha", "Alpha", fk.alpha) + row("plain", "Plain", fk.plain) + "</div>" +
+    '<p class="fine">Flesch&ndash;Kincaid grade level, lower is easier. It is a rough measure with simple sentence splitting, so read it as a direction, not a verdict.</p></section>';
+}
+
+function indexPanel(b, code) {
+  let rows = "";
+  b.chapters.forEach((c) => c.verses.forEach((v) => v.a.forEach((g) => {
+    if (g.t === "zs") rows += "<tr><td>" + c.n + ":" + esc(v.n) + "</td><td>" + esc(g.a) + "</td><td>" + (g.p ? esc(g.p) : "<em>(left out)</em>") + "</td></tr>";
+  })));
+  if (!rows) return "";
+  return '<details><summary>Slang dial: Alpha wording and its plain version</summary><div class="scroll"><table><thead><tr><th>Verse</th><th>Alpha</th><th>Plain</th></tr></thead><tbody>' + rows + "</tbody></table></div></details>";
+}
+
+function syncControls() {
+  document.querySelectorAll("#modes button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.mode === state.mode)));
+  document.querySelectorAll("#books button").forEach((x) => x.setAttribute("aria-pressed", String(Number(x.dataset.i) === state.book)));
+  document.getElementById("notes").setAttribute("aria-pressed", String(state.notes));
+}
+
+function render() { syncControls(); renderBook(); store.set({ mode: state.mode, notes: state.notes }); }
+
+function fromHash() {
+  const m = /^#([a-z]+)(?:-(\d+))?$/.exec(location.hash);
+  if (!m) return false;
+  const i = DATA.books.findIndex((b) => b.code.toLowerCase() === m[1]);
+  if (i < 0) return false;
+  state.book = i;
+  return m[2] || true;
+}
+
+document.getElementById("books").innerHTML = DATA.books.map((b, i) => '<button type="button" data-i="' + i + '" aria-pressed="false">' + esc(b.title.replace(/\s*\(.*\)/, "")) + "</button>").join("");
+
+document.addEventListener("click", (e) => {
+  const t = e.target;
+  const modeBtn = t.closest("#modes button");
+  if (modeBtn) { state.mode = modeBtn.dataset.mode; render(); return; }
+  const bookBtn = t.closest("#books button");
+  if (bookBtn) { state.book = Number(bookBtn.dataset.i); location.hash = DATA.books[state.book].code.toLowerCase(); render(); window.scrollTo(0, 0); return; }
+  if (t.closest("#notes")) { state.notes = !state.notes; render(); return; }
+  const nb = t.closest(".nbtn");
+  if (nb) {
+    const box = nb.nextElementSibling, open = nb.getAttribute("aria-expanded") === "true";
+    nb.setAttribute("aria-expanded", String(!open)); box.hidden = open; return;
+  }
+  const sl = t.closest("mark.slang");
+  if (sl) flip(sl);
+});
+document.addEventListener("keydown", (e) => {
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches("mark.slang")) { e.preventDefault(); flip(e.target); }
+});
+function flip(el) {
+  const showPlain = !el.classList.contains("flip");
+  el.classList.toggle("flip", showPlain);
+  el.classList.toggle("gone", showPlain && !el.dataset.p);
+  el.textContent = showPlain ? (el.dataset.p || el.dataset.a) : el.dataset.a;
+}
+
+const h0 = fromHash();
+render();
+if (typeof h0 === "string") { const el = document.getElementById(DATA.books[state.book].code.toLowerCase() + "-" + h0); if (el) el.scrollIntoView(); }
+window.addEventListener("hashchange", () => { const r = fromHash(); render(); if (typeof r === "string") { const el = document.getElementById(DATA.books[state.book].code.toLowerCase() + "-" + r); if (el) el.scrollIntoView(); } });
+</script>

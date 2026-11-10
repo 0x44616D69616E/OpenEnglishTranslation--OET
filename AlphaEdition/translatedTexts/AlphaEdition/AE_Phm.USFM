@@ -1,0 +1,58 @@
+\id PHM - Open English Translation—Alpha Edition (OET-AE) v0.1.0, an unofficial adaptation of OET-RV v0.2.0
+\usfm 3.0
+\ide UTF-8
+\rem Unofficial register adaptation of the OET Readers’ Version (cleaned USFM export, v0.2.0) by Robert Hunt / Freely-Given.org, licensed CC BY-SA 4.0. Not endorsed by the OET project. See STYLE_GUIDE.md.
+\rem AI-assisted adaptation. The original OET-RV is hand-made; this edition is not. It is a reading aid, not a study text: for anything that matters, check the OET-RV and the OET Literal Version.
+\h Filemon
+\toc1 Filemon
+\toc2 Filemon
+\toc3 Phm
+\mt2 Paulos’s letter to
+\mt1 Filemon
+\is1 Introduction
+\ip Filemon was a follower of Yeshua and part of a group of believers in the city of Kolossai. He owned a slave named Onesimos, who ran away and eventually met Paulos the missionary in prison in Romai. There, thanks to Paulos sharing the good message, Onesimos became a believer in Yeshua. In \bk Paulos’s letter to Filemon\bk*, Paulos asks Filemon to repair the relationship with Onesimos: he’s sending Onesimos back, and he wants Filemon to take him in, not just because he’s forgiven him, but because Onesimos is now a fellow believer and therefore a brother.
+\ip This is the shortest of Paulos’s surviving letters, and it’s a masterclass in asking for something difficult without simply giving an order. Notice how often he chooses to ask instead of command. Footnotes in this edition are labelled \em Decoder\em* (for slang) and \em Nerd note\em* (for background).
+\iot Main components of Paulos’s letter
+\io1 Introduction \ior 1-3\ior*
+\io1 Praising Filemon \ior 4-7\ior*
+\io1 Paulos’s request about Onesimos \ior 8-22\ior*
+\io1 Ending \ior 23-25\ior*
+\rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\c 1
+\p
+\v 1 This letter is from Paulos, a prisoner \nd of messiah Yeshua\nd* \add (Jesus; Grk. Yesus)\add*, and our brother Timotheos, to our dear co-worker Filemon \add (Philemon)\add*,
+\v 2 and to our sister Apfia and our fellow soldier Arkippos,\x + \xo 2: \xt Col 4:17.\x* and to the assembly that meets in your home.\f + \fr 1:2 \ft Nerd note: The letter is addressed to the whole house assembly, not just Filemon. Verses 3 and 25 use ‘you all’, so the request about Onesimos is made with an audience listening.\f*
+\v 3 Grace and peace to you all from our father \nd God\nd* and from \nd the master Yeshua\nd* \nd the messiah\nd*.
+\s1 Paulos’s prayer and gratefulness
+\p
+\v 4 Filemon \add (Philemon)\add*, I’m always thanking my \nd God\nd* and mentioning you in my prayers,
+\v 5 because I keep hearing about your faith in the \nd master Yeshua\nd* \add (Jesus; Grk. Yesus)\add* and your love for all the believers.
+\v 6 I’m praying that the way you share your faith will become active as you recognize every good thing we have in \nd the messiah\nd*.\f + \fr 1:6 \ft Nerd note: This verse is hard to translate even from the Greek. The OET draft this edition is based on flagged it as unclear, and translators disagree about it, so treat this as one reasonable reading, not the final word.\f*
+\v 7 I was so happy and encouraged by your love, because the hearts of the believers have been refreshed by you, brother.
+\s1 Paulos’s request about Onesimos
+\p
+\v 8 Because I’m united with \nd the messiah\nd*, I could be bold and simply tell you what you need to do,
+\v 9 but because of love I’d rather appeal to you instead, as Paulos, \zs an unc by now|an old man by now\zs*, and also a prisoner for \nd Yeshua \+add (Jesus; Grk. Yesus)\+add* the messiah\nd*.\f + \fr 1:9 \ft Decoder: ‘Unc’ is slang, short for ‘uncle’, for an older guy who’s a bit out of touch, though sometimes it’s said with respect. Paulos is calling himself an older man, and the Greek word here does mean that.\f*
+\v 10 I’m appealing to you about Onesimos,\x + \xo 10: \xt Col 4:9.\x* who became my \add spiritual\add* ‘son’ while I’ve been in prison.\f + \fr 1:10 \ft Nerd note: ‘Onesimos’ was a real Greek name with the sense ‘useful’, which sets up the wordplay in the next verse.\f*
+\v 11 Before, he was useless to you, but now he’s useful to both of us.\f + \fr 1:11 \ft Nerd note: The Greek pair here is achrēstos (‘useless’) and euchrēstos (‘useful’), a pun that echoes his name.\f*
+\p
+\v 12 I’m sending him back to you (even though he’s my own heart,
+\v 13 and I wanted to keep him here) so that he could serve me here while I’m in chains for the good message,
+\v 14 but I didn’t want to do anything without hearing what you think, so that the good you do isn’t forced, but comes from you choosing it.
+\p
+\v 15 Maybe this is why he was separated from you for a while: so that you could have him back for good,
+\v 16 no longer as a slave, but as better than a slave, a dear brother. He’s that to me most of all, but he should be even more so to you, both as a person and in \nd Yahweh\nd*.\f + \fr 1:16 \ft Nerd note: Scholars still debate whether Paulos is asking Filemon to free Onesimos or simply to treat him differently. What’s clear is the reframing: ‘brother’ where Roman law said ‘property’.\f*
+\p
+\v 17 So if you consider me a partner, welcome him the way you’d welcome me.
+\v 18 And if he wronged you or owes you anything, put it on my tab.
+\v 19 \sig I, Paulos, am writing this part in my own handwriting: I’ll pay back whatever he owes you, and I won’t even bring up that you basically owe me your whole self.\sig*\f + \fr 1:19 \ft Nerd note: Rhetoricians call this move paralipsis: mentioning something by announcing that you won’t mention it. Paulos is very polite and very good at this.\f*
+\v 20 \sig Yes, brother, since we’re both in \+nd Yahweh\+nd*, let me get some benefit from you: refresh my heart in \+add the\+add* \+nd messiah\+nd*.\sig*
+\p
+\v 21 \sig I’m writing to you because I’m sure you’ll do what I’m asking; in fact, I know you’ll do even more than I ask.\sig*
+\s1 Paulos’s final greetings
+\p
+\v 22 \sig Also, get a place ready for me to stay, because I’m hoping to visit, thanks to all of you praying for me.\sig*
+\v 23 \sig Epafras \+add (Epaphras)\+add*,\x + \xo 23: \xt Col 1:7; 4:12.\x* my fellow prisoner in \+nd Yeshua\+nd* \+add (Jesus; Grk. Yesus)\+add* \+nd the\+nd* \+nd messiah\+nd*, sends his greetings\sig*,
+\v 24 \sig and so do my fellow workers Markos,\x + \xo 24: \xt Acts 12:12,25; 13:13; 15:37-39; Col 4:10.\x* Aristarkos,\x + \xo 24: \xt Acts 19:29; 27:2; Col 4:10.\x* Demas,\x + \xo 24: \xt Col 4:14; 2Tim 4:10.\x* and Lukas \+add (Luke)\+add*.\sig*\x + \xo 24: \xt Col 4:14; 2Tim 4:11.\x*
+\p
+\v 25 \sig May the grace of our \+nd master\+nd* \+nd Yeshua\+nd* \+nd the\+nd* \+nd messiah\+nd* be with the spirit of you all. May it be so.\sig*
