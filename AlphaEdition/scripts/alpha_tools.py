@@ -208,6 +208,10 @@ def term_regex(term):
 
 # ----------------------------------------------------------------------------- validate
 def validate_pair(alpha_path, source_path, names, avoid, use, threshold):
+    # A book may set its own dial: "\\rem dial-threshold 9" (slang terms per 100 words).
+    _m = re.search(r"^\\rem dial-threshold\s+([0-9.]+)", Path(alpha_path).read_text(encoding="utf-8"), re.M)
+    if _m:
+        threshold = float(_m.group(1))
     errors, warnings, report = [], [], []
     a_lines, s_lines = read_lines(alpha_path), read_lines(source_path)
     _, a_body = split_at_first_chapter(a_lines)

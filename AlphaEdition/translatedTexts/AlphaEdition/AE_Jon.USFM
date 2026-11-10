@@ -1,6 +1,8 @@
-\id JON - Open English Translation—Alpha Edition (OET-AE) v0.1.0, an unofficial adaptation of OET-RV v0.4.2
+\id JON - Open English Translation—Alpha Edition (OET-AE) v0.2.0 (full-dialect pilot), an unofficial adaptation of OET-RV v0.4.2
 \usfm 3.0
 \ide UTF-8
+\rem dial-threshold 12
+\rem Full-dialect pilot: narration and crowd speech use Gen Alpha storytelling voice; prayers, divine speech and Yonah’s death wishes stay plain on purpose (see STYLE_GUIDE.md).
 \rem Unofficial register adaptation of the OET Readers’ Version (cleaned USFM export, v0.4.2) by Robert Hunt / Freely-Given.org, licensed CC BY-SA 4.0. Not endorsed by the OET project. See STYLE_GUIDE.md.
 \rem AI-assisted adaptation. The original OET-RV is hand-made; this edition is not. It is a reading aid, not a study text: for anything that matters, check the OET-RV and the OET Literal Version.
 \h Yonah
@@ -9,9 +11,9 @@
 \toc3 Yonah
 \mt1 Yonah (Jonah)
 \is1 Introduction
-\ip Here’s the setup. A prophet named Yonah (you probably know him as ‘Jonah’) lived in northern Yisrael/Israel around 250 years after David became king, i.e., in the eighth century BC, perhaps around 785 BC. God gave him a simple assignment: go to the city of Nineveh in Ashur/Assyria and speak out against it. Yonah’s response was to buy a ticket in the opposite direction. That makes this account unusual among the prophetic books, because its main character is a prophet who \em didn’t\em* do what God told him. He avoided the assignment because he suspected God would be merciful and call off the punishment if the people of that city turned away from their sins. Then came a storm, a huge fish, a beach, and a second chance, and Yonah ended up in Nineveh after all. It worked: the king led a movement of turning back towards God. Yonah was furious that God then didn’t destroy the city.
+\ip Okay, so here’s the setup. A prophet named Yonah (you probably know him as ‘Jonah’) lived in northern Yisrael/Israel around 250 years after David became king, i.e., in the eighth century BC, perhaps around 785 BC. God gave him a simple assignment: go to the city of Nineveh in Ashur/Assyria and speak out against it. Yonah’s response? He bought a ticket in the opposite direction. That makes this account unusual among the prophetic books, because its main character is a prophet who \em didn’t\em* do what God told him. He avoided the assignment because he suspected God would be merciful and call off the punishment if the people of that city turned away from their sins. Then came a storm, a huge fish, a beach, and a second chance, and Yonah ended up in Nineveh after all. And it worked: the king led a movement of turning back towards God. Yonah was furious that God then didn’t destroy the city. Yes, really.
 \ip The author also wants us to notice that Yahweh is in control of everything he made: the ocean, the wind, a fish, a plant, a grub. But most of all, we’re told how loving and merciful God is, because even the enemies of his chosen people were forgiven and saved after they turned away from their sins. (Notice who’s still arguing at the very end of the story. It’s the prophet.)
-\ip A note on the slang in this edition: anything that might need translating gets a footnote labelled \em Decoder\em*, and anything that needs scholarly background gets a footnote labelled \em Nerd note\em*. Slang ages fast, so if a word here already sounds embarrassing by the time you read it, that’s not a mistake. That’s how slang works.
+\ip A note on how this one is told: the narration and the crowd scenes are in the way people actually tell a story to their friends, with slang, in the voice you’d hear at lunch. Anything that might need translating gets a footnote labelled \em Decoder\em*, and anything that needs scholarly background gets a footnote labelled \em Nerd note\em*. Tap any highlighted bit to see the plain wording. God’s words, the prayers, and the darkest moments stay plain on purpose; some things aren’t for joking. Slang ages fast, so if a word here already sounds embarrassing by the time you read it, that’s not a mistake. That’s how slang works.
 \iot The story in four parts
 \io1 Yonah runs from Yahweh’s assignment \ior 1:1-17\ior*
 \io1 Yonah’s prayer from inside the fish \ior 2:1-10\ior*
@@ -22,33 +24,33 @@
 \s1 Yonah gets an assignment and flees the country
 \s4 Northern kingdom
 \p
-\v 1 Now Yahweh gave Yonah \add (Jonah)\add*, Amitay’s son, an assignment.\x + \xo 1:1: \xt 2Ki 14:25.\x*\f + \fr 1:1 \ft Nerd note: A prophet named Yonah, son of Amitay, is also mentioned in 2 Kings 14:25, which is the basis for placing him in the 700s BC.\f*
+\v 1 \zs Okay, so Yahweh|Now Yahweh\zs* gave Yonah \add (Jonah)\add*, Amitay’s son, an assignment.\x + \xo 1:1: \xt 2Ki 14:25.\x*\f + \fr 1:1 \ft Nerd note: A prophet named Yonah, son of Amitay, is also mentioned in 2 Kings 14:25, which is the basis for placing him in the 700s BC.\f*
 \v 2 “Go to Nineveh, that huge city, and call it out. I’ve seen how evil they are.”
 \p
-\v 3 Yonah’s plan: absolutely not. He decided to run away from Yahweh, so he went down to Yafo \add (Joppa)\add* and found a ship about to leave for Tarshish. He paid the fare and went aboard, headed for Tarshish to get away from Yahweh.\f + \fr 1:3 \ft Nerd note: Tarshish is thought to be far to the west across the Mediterranean (Spain is a popular guess, but scholars aren’t certain). Nineveh was to the east. Yonah didn’t just leave; he picked the opposite direction.\f*
+\v 3 Yonah’s response: \zs absolutely not|no\zs*. He \zs ghosted Yahweh|decided to run away from Yahweh\zs*, so he went down to Yafo \add (Joppa)\add*, found a ship about to leave for Tarshish, paid the fare, and hopped aboard, headed for Tarshish to get away from Yahweh. \zs Delulu plan, but he committed.|\zs*\f + \fr 1:3 \ft Decoder: ‘Ghosted’ means cutting someone off and vanishing without a word. It’s usually said about texts and dating, and here it’s about God.\f*\f + \fr 1:3 \ft Decoder: ‘Delulu’ is short for ‘delusional’, and it means hopelessly unrealistic. Running from God by boat is a strong candidate.\f*\f + \fr 1:3 \ft Nerd note: Tarshish is thought to be far to the west across the Mediterranean (Spain is a popular guess, but scholars aren’t certain). Nineveh was to the east. Yonah didn’t just leave; he picked the opposite direction.\f*
 \p
-\v 4 Then Yahweh sent a powerful wind over the sea, and the storm got so intense that everyone aboard thought the ship was about to fall apart.
-\v 5 The sailors were terrified. Each of them cried out to their own \add gods\add* for help, and they dumped the cargo overboard to make the ship lighter. Meanwhile, Yonah had gone down into the hold, lain down, and fallen fast asleep\zs : major aura, or major denial|, either perfectly calm or in complete denial\zs*.\f + \fr 1:5 \ft Decoder: ‘Aura’ is slang for effortless coolness. Sleeping through a storm that has professional sailors praying earns Yonah either a lot of aura or none, depending on whom you ask.\f*
+\v 4 Then Yahweh sent a \zs massive|powerful\zs* wind over the sea, and the storm got so wild that everyone on board was convinced the ship was \zs straight-up cooked|about to fall apart\zs*.\f + \fr 1:4 \ft Decoder: ‘Cooked’ means finished, done for.\f*
+\v 5 The sailors were \zs losing it|terrified\zs*. Every single one of them started yelling to their own \add gods\add* for help, and they threw the cargo overboard to make the ship lighter. \zs And Yonah? Down|Meanwhile, Yonah had gone down\zs* in the hold, \zs lying down, fast asleep|lain down, and fallen fast asleep\zs*\zs : major aura, or major denial|, either perfectly calm or in complete denial\zs*.\f + \fr 1:5 \ft Decoder: ‘Aura’ is slang for effortless coolness. Sleeping through a storm that has professional sailors praying earns Yonah either a lot of aura or none, depending on whom you ask.\f*
 \p
-\v 6 The ship’s captain went to him and said, “How are you sleeping right now? Get up and pray to your god. Maybe he’ll notice us and we won’t die.”
+\v 6 The ship’s captain went to him and \zs was like|said\zs*, “\zs Bruh. |\zs*How are you sleeping right now? Get up and pray to your god. Maybe he’ll notice us and we won’t die.”\f + \fr 1:6 \ft Decoder: ‘Bruh’ is a reaction word, roughly ‘come on, really?’\f*
 \p
-\v 7 Then the sailors said to each other, “Let’s draw straws and find out whose fault this disaster is.” So they drew straws, and Yonah got picked.
-\v 8 So they said to him, “Okay, explain. Why is this disaster happening to us? What do you do for a living? Where are you from? What country? What’s your nationality?”
+\v 7 Then the sailors \zs went,|said to each other,\zs* “Let’s draw straws and find out whose fault this disaster is.” So they drew straws, and Yonah got picked. \zs Shocker.|\zs*
+\v 8 So they \zs hit him with questions|said to him\zs*: “Okay, explain. Why is this disaster happening to us? What do you do for a living? Where are you from? What country? What’s your nationality?”
 \p
 \v 9 And he said to them, “I’m an Ivri \add (Hebrew)\add*, and I fear Yahweh, the god of heaven, who made the sea and the land.”\f + \fr 1:9 \ft Nerd note: The Hebrew root for ‘fear’ shows up in verses 5, 9, 10 and 16, sometimes as ‘revere’ (here) and sometimes as ‘terrified’ (the sailors). Also notice the irony: Yonah says Yahweh made the sea and the land while sailing away across the sea.\f*
 \p
-\v 10 The men panicked. “WHAT did you do?!” they asked, because Yonah had already told them that he was running from Yahweh.
+\v 10 The men \zs lost it|panicked\zs*. “\zs Bruh. |\zs*WHAT did you do?!” they asked, because Yonah had already told them that he was running from Yahweh.
 \p
-\v 11 Then they asked him, “Okay, so what do we do with you to make the sea calm down?” Because the storm was getting worse and worse.
+\v 11 Then they asked him, “Okay, so what do we do with you to make the sea calm down?” Because the storm was getting worse by the second.
 \p
 \v 12 And he said to them, “Pick me up and throw me into the sea, and it will calm down. I know this terrible storm came because of me.”
 \p
-\v 13 Even so, the men tried to row back to land, but they couldn’t. The sea kept getting wilder and wilder.
+\v 13 Even so, the men tried to row back to land, but they couldn’t. The sea just kept getting wilder and wilder. \zs (Points for trying.)|\zs*
 \v 14 So they called out to Yahweh: “We’re begging you, Yahweh: please don’t let us die because of this man, and don’t hold us guilty for this. You’re the one who made it happen.”
 \v 15 Then they picked Yonah up and threw him into the sea, and the sea went calm.
 \v 16 The men were so in awe of Yahweh, and honestly terrified of him, that they offered a sacrifice to him and made vows.
 \p
-\v 17 Then Yahweh ordered a huge fish to swallow Yonah \add (Jonah)\add*, and he stayed in the belly of the fish for three days and three nights.\x + \xo 1:17: \xt Mat 12:40.\x*\f + \fr 1:17 \ft Nerd note: The Hebrew says ‘huge fish’, not ‘whale’. The whale tradition comes from later translations, where the Greek used a word that means something like ‘sea monster’.\f*
+\v 17 Then Yahweh ordered a huge fish to swallow Yonah \add (Jonah)\add*, and he stayed in the belly of the fish for three days and three nights. \zs Three. Whole. Days.|\zs*\x + \xo 1:17: \xt Mat 12:40.\x*\f + \fr 1:17 \ft Nerd note: The Hebrew says ‘huge fish’, not ‘whale’. The whale tradition comes from later translations, where the Greek used a word that means something like ‘sea monster’.\f*
 \c 2
 \s1 Yonah’s prayer from inside the fish
 \p
@@ -69,19 +71,19 @@
 \q1
 \v 9 But I’ll thank you out loud and offer you a sacrifice. I made a vow and I’ll keep it, because Yahweh is my rescuer.”\f + \fr 2:9 \ft Nerd note: Many readers have noticed that this prayer is all thanksgiving. There is no ‘sorry’ anywhere in it.\f*
 \p
-\v 10 Then Yahweh spoke to the fish, and it threw up Yonah \add (Jonah)\add* onto dry land\zs : respawn complete|\zs*.\f + \fr 2:10 \ft Decoder: ‘Respawn’ is a video-game word for coming back after you’ve been defeated. Gamers would call this one a respawn, though the beach is not a standard spawn point.\f*
+\v 10 Then Yahweh spoke to the fish, and it \zs yeeted|threw up\zs* Yonah \add (Jonah)\add* onto dry land\zs : respawn complete|\zs*.\f + \fr 2:10 \ft Decoder: ‘Yeeted’ means threw hard and fast, with no care for the landing.\f*\f + \fr 2:10 \ft Decoder: ‘Respawn’ is a video-game word for coming back after you’ve been defeated. Gamers would call this one a respawn, though the beach is not a standard spawn point.\f*
 \c 3
 \s1 Second chance, same assignment
 \p
-\v 1 And Yahweh spoke to Yonah \add (Jonah)\add* a second time:
+\v 1 And Yahweh spoke to Yonah \add (Jonah)\add* \zs round two|a second time\zs*:
 \v 2 “Go to Nineveh, that huge city, and announce the message I’m giving you.”
 \p
-\v 3 So this time Yonah went straight to Nineveh\zs , locked in|\zs*. It was an enormous city; it took three days to get across.\f + \fr 3:3 \ft Decoder: ‘Locked in’ means fully focused. This time, Yonah is.\f*
-\v 4 Yonah went one day’s travel into the city and announced, in effect, that Nineveh was \zs cooked|finished\zs*: “Nineveh is going to be destroyed in forty days!”\x + \xo 3:4-5: \xt Mat 12:41; Luk 11:32.\x*\f + \fr 3:4 \ft Decoder: ‘Cooked’ means finished, done for.\f*\f + \fr 3:4 \ft Nerd note: In Hebrew, Yonah’s whole sermon is five words. The last word can mean ‘overthrown’, and Nineveh’s next move is to turn itself around.\f*
+\v 3 So this time Yonah skipped the \zs side quests|detours\zs* and went straight to Nineveh\zs , locked in|\zs*. It was an enormous city; \zs like, |\zs*it took three days to get across.\f + \fr 3:3 \ft Decoder: ‘Side quests’ are optional detours in a video game, away from the main mission. Yonah’s trip to Tarshish was one, and a big one.\f*\f + \fr 3:3 \ft Decoder: ‘Locked in’ means fully focused. This time, Yonah is.\f*
+\v 4 Yonah went one day’s travel into the city and announced, \zs no cap, |\zs*that Nineveh was \zs cooked|finished\zs*: “Nineveh is going to be destroyed in forty days!” \zs That was the whole pitch.|\zs*\x + \xo 3:4-5: \xt Mat 12:41; Luk 11:32.\x*\f + \fr 3:4 \ft Decoder: ‘No cap’ means ‘for real’, with no lie.\f*\f + \fr 3:4 \ft Decoder: ‘Cooked’ means finished, done for.\f*\f + \fr 3:4 \ft Nerd note: In Hebrew, Yonah’s whole sermon is five words. The last word can mean ‘overthrown’, and Nineveh’s next move is to turn itself around.\f*
 \p
-\v 5 The people of Nineveh believed God. They announced a time of fasting, and from the least to the most important, they all put on sackcloth \add as a sign of sorrow for what they’d done\add*.
+\v 5 The people of Nineveh believed God, and they \zs speedran the whole turnaround|acted quickly\zs*: they announced a time of fasting, and from the least to the most important, they all put on sackcloth \add as a sign of sorrow for what they’d done\add*.\f + \fr 3:5 \ft Decoder: ‘Speedran’ comes from gaming, where a speedrun means finishing as fast as possible. Nineveh’s turnaround took one sermon.\f*
 \p
-\v 6 When the king of Nineveh heard about it, he got down from his throne, took off his robe, put on sackcloth, and sat in a pile of ashes.\f + \fr 3:6 \ft Nerd note: Notice the order: the people respond in verse 5, and only then does the news reach the king in verse 6. In this story, the change starts at the bottom.\f*
+\v 6 When the news reached the king of Nineveh, he got down from his throne, took off his robe, put on sackcloth, and sat in a pile of ashes. \zs The king. Himself.|\zs*\f + \fr 3:6 \ft Nerd note: Notice the order: the people respond in verse 5, and only then does the news reach the king in verse 6. In this story, the change starts at the bottom.\f*
 \v 7 Then he had a statement written out and publicly read all through Nineveh: “By order of the king and his advisors: no people or animals, whether herds or flocks, may graze or eat anything, and they can’t even drink water.
 \v 8 People and animals alike must wear sackcloth, and everyone should use all their strength to cry out to God and turn away from the evil and \add violent\add* things they’ve been doing.
 \v 9 Maybe God will turn around and change his mind and put away his fierce anger, and maybe we won’t die.”
@@ -90,15 +92,15 @@
 \c 4
 \s1 Yonah has a meltdown
 \p
-\v 1 But Yonah \add (Jonah)\add* was really upset, \zs full-on crashing out|beside himself\zs*, and angry about the whole situation.\f + \fr 4:1 \ft Decoder: ‘Crashing out’ is current slang for a full emotional meltdown.\f*
+\v 1 But Yonah \add (Jonah)\add* was \zs full-on crashing out|beside himself\zs*, \zs absolutely|\zs* furious about the whole situation.\f + \fr 4:1 \ft Decoder: ‘Crashing out’ is current slang for a full emotional meltdown.\f*
 \v 2 And he said to Yahweh, “Okay, Yahweh, isn’t this exactly what I said would happen when I was still in my own country? That’s why I ran away to Tarshish the first time: I knew that you’re a caring, forgiving god, slow to get angry, full of kindness, and not wanting to cause suffering.\x + \xo 4:2: \xt Exo 34:6.\x*\f + \fr 4:2 \ft Nerd note: This echoes a famous description of God in Exodus 34:6. Most people treat that description as good news. Yonah treats it as a spoiler.\f*
 \v 3 So now, Yahweh, please kill me, because I’d rather die than live like this.”\x + \xo 4:3: \xt 1Ki 19:4.\x*
 \p
 \v 4 But Yahweh said, “Do you really think it’s right to be this angry?”
 \p
 \v 5 And Yonah went outside the city to the east, made himself a shelter, and sat in its shade to see what would happen to the city.
-\v 6 Then Yahweh God commanded a plant to grow up over Yonah, to shade his head and ease his misery. Yonah was thrilled about the plant.\f + \fr 4:6 \ft Nerd note: This is the only place in the whole story where Yonah is described as happy, and it’s about a plant.\f*
-\v 7 Then at dawn the next day God commanded a grub, and it attacked the plant, which shriveled up.
+\v 6 Then Yahweh God commanded a plant to grow up over Yonah, to shade his head and ease his misery. Yonah was \zs highkey obsessed with|thrilled about\zs* the plant.\f + \fr 4:6 \ft Decoder: ‘Highkey’ means openly and fully, the opposite of ‘lowkey’.\f*\f + \fr 4:6 \ft Nerd note: This is the only place in the whole story where Yonah is described as happy, and it’s about a plant.\f*
+\v 7 Then at dawn the next day God commanded a grub, and it attacked the plant, which \zs got cooked|shriveled up\zs*.
 \v 8 And when the sun came up, God sent a scorching east wind and the sun beat down on Yonah’s head. He felt faint and asked for his life to end, saying, “It’s better for me to die than to live.”
 \p
 \v 9 And God said to Yonah, “Do you really think it’s right to be angry about the plant?”

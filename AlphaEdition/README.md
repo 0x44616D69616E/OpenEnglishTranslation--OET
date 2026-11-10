@@ -4,6 +4,8 @@ A reading-register adaptation of the **Open English Translation Readers’ Versi
 
 **Status: pilot.** Two books are done: **Jonah** (narrative and poetry) and **Philemon** (letter). The rest of the Bible is not adapted yet.
 
+**Voice depth.** Jonah (v0.2.0) is the *full-dialect* pilot: Gen Alpha storytelling voice in narration and crowd speech, with prayers, divine speech and the darkest moments kept plain on purpose. Every voice choice is a tap-to-flip span, and Plain mode returns clean, source-faithful wording. Philemon is still the lighter v0.1.0 treatment.
+
 ## Scope in one paragraph
 
 This is a **register layer on the Readers’ Version**, not a remake of the Literal Version (which stays untouched as the companion the OET intends). Style is **thought-for-thought**, as dynamic as the RV already is and no more, with names, numbers, cross-references and structure locked and checked by a validator. Freer readings and jokes go in footnotes. Details and the open decisions are in `STYLE_GUIDE.md` §0.
