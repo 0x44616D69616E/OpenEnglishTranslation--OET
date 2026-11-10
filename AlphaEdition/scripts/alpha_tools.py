@@ -558,8 +558,18 @@ def cmd_reader(args):
     # Deployable copy for static hosting (Cloudflare Pages: output dir AlphaEdition/site)
     site = READER_DIR.parent / "site"
     site.mkdir(exist_ok=True)
-    (site / "index.html").write_text(html, encoding="utf-8")
-    print(f"wrote {site / 'index.html'}")
+    # Strict-CSP variant (script-src 'self', no external fonts): the one inline
+    # script moves to reader.js and the Google Fonts link is dropped (the CSS
+    # font stacks already fall back to system fonts).
+    scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
+    if len(scripts) != 1:
+        print(f"expected exactly one inline script, found {len(scripts)}", file=sys.stderr)
+        return 2
+    strict = html.replace(f"<script>{scripts[0]}</script>", '<script src="reader.js"></script>')
+    strict = re.sub(r'\s*<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>', "", strict)
+    (site / "reader.js").write_text(scripts[0].strip() + "\n", encoding="utf-8")
+    (site / "index.html").write_text(strict, encoding="utf-8")
+    print(f"wrote {site / 'index.html'} + reader.js (CSP-safe)")
     return 0
 
 
