@@ -565,7 +565,7 @@ def cmd_reader(args):
     if len(scripts) != 1:
         print(f"expected exactly one inline script, found {len(scripts)}", file=sys.stderr)
         return 2
-    strict = html.replace(f"<script>{scripts[0]}</script>", '<script src="reader.js"></script>')
+    strict = html.replace(f"<script>{scripts[0]}</script>", f'<script src="{args.site_base.rstrip("/")}/reader.js"></script>')
     strict = re.sub(r'\s*<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>', "", strict)
     (site / "reader.js").write_text(scripts[0].strip() + "\n", encoding="utf-8")
     (site / "index.html").write_text(strict, encoding="utf-8")
@@ -578,6 +578,7 @@ def main():
     ap.add_argument("command", choices=["validate", "render", "reader", "all"])
     ap.add_argument("--alpha-dir", default=str(ALPHA_DIR))
     ap.add_argument("--source-dir", default=str(SOURCE_DIR))
+    ap.add_argument("--site-base", default="", help="URL path the site build is served from, e.g. /ai (default: site root)")
     ap.add_argument("--threshold", type=float, default=DENSITY_THRESHOLD)
     args = ap.parse_args()
     if args.command == "validate":
