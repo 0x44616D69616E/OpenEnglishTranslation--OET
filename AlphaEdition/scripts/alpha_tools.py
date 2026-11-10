@@ -567,6 +567,16 @@ def cmd_reader(args):
         return 2
     strict = html.replace(f"<script>{scripts[0]}</script>", f'<script src="{args.site_base.rstrip("/")}/reader.js"></script>')
     strict = re.sub(r'\s*<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>', "", strict)
+    # The artifact host normally supplies the document skeleton; a plain static
+    # host does not, so add doctype, charset, viewport and the small reset here.
+    strict = (
+        '<!doctype html>\n<html lang="en"><head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
+        '<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}'
+        ':root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>\n'
+        + strict
+    )
+    strict = strict.replace('<script src=', '<script charset="utf-8" src=')
     (site / "reader.js").write_text(scripts[0].strip() + "\n", encoding="utf-8")
     (site / "index.html").write_text(strict, encoding="utf-8")
     print(f"wrote {site / 'index.html'} + reader.js (CSP-safe)")
