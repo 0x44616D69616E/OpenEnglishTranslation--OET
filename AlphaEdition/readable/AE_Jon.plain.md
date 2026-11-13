@@ -24,10 +24,10 @@ A note on how this one is told: the narration and the crowd scenes are in the wa
 <sup>**1**</sup> Now Yahweh gave Yonah (Jonah), Amitay’s son, an assignment. *(cf. 2Ki 14:25)*[^1]
 <sup>**2**</sup> “Go to Nineveh, that huge city, and call it out. I’ve seen how evil they are.”
 
-<sup>**3**</sup> Yonah’s response: no. He decided to run away from Yahweh, so he went down to Yafo (Joppa), found a ship about to leave for Tarshish, paid the fare, and hopped aboard, headed for Tarshish to get away from Yahweh. [^2]
+<sup>**3**</sup> Yonah’s response: no. He decided to run away from Yahweh, so he went down to Yafo (Joppa), found a ship about to leave for Tarshish, paid the fare, and went aboard, headed for Tarshish to get away from Yahweh. [^2]
 
-<sup>**4**</sup> Then Yahweh sent a powerful wind over the sea, and the storm got so wild that everyone on board was convinced the ship was about to fall apart.
-<sup>**5**</sup> The sailors were terrified. Every single one of them started yelling to their own gods for help, and they threw the cargo overboard to make the ship lighter. Meanwhile, Yonah had gone down in the hold, lain down, and fallen fast asleep, either perfectly calm or in complete denial.
+<sup>**4**</sup> Then Yahweh sent a powerful wind over the sea, and the storm got so intense that everyone on board was sure the ship was about to fall apart.
+<sup>**5**</sup> The sailors were terrified. Each of them cried out to their own gods for help, and they dumped the cargo overboard to make the ship lighter. Meanwhile, Yonah had gone down into the hold, lain down, and fallen fast asleep, either perfectly calm or in complete denial.
 
 <sup>**6**</sup> The ship’s captain went to him and said, “How are you sleeping right now? Get up and pray to your god. Maybe he’ll notice us and we won’t die.”
 
@@ -38,11 +38,11 @@ A note on how this one is told: the narration and the crowd scenes are in the wa
 
 <sup>**10**</sup> The men panicked. “WHAT did you do?!” they asked, because Yonah had already told them that he was running from Yahweh.
 
-<sup>**11**</sup> Then they asked him, “Okay, so what do we do with you to make the sea calm down?” Because the storm was getting worse by the second.
+<sup>**11**</sup> Then they asked him, “Okay, so what do we do with you to make the sea calm down?” Because the storm was getting worse and worse.
 
 <sup>**12**</sup> And he said to them, “Pick me up and throw me into the sea, and it will calm down. I know this terrible storm came because of me.”
 
-<sup>**13**</sup> Even so, the men tried to row back to land, but they couldn’t. The sea just kept getting wilder and wilder.
+<sup>**13**</sup> Even so, the men tried to row back to land, but they couldn’t. The sea kept getting wilder and wilder.
 <sup>**14**</sup> So they called out to Yahweh: “We’re begging you, Yahweh: please don’t let us die because of this man, and don’t hold us guilty for this. You’re the one who made it happen.”
 <sup>**15**</sup> Then they picked Yonah up and threw him into the sea, and the sea went calm.
 <sup>**16**</sup> The men were so in awe of Yahweh, and honestly terrified of him, that they offered a sacrifice to him and made vows.
@@ -93,7 +93,7 @@ A note on how this one is told: the narration and the crowd scenes are in the wa
 <sup>**5**</sup> The people of Nineveh believed God, and they acted quickly: they announced a time of fasting, and from the least to the most important, they all put on sackcloth as a sign of sorrow for what they’d done.
 
 <sup>**6**</sup> When the news reached the king of Nineveh, he got down from his throne, took off his robe, put on sackcloth, and sat in a pile of ashes. [^7]
-<sup>**7**</sup> Then he had a statement written out and publicly read all through Nineveh: “By order of the king and his advisors: no people or animals, whether herds or flocks, may graze or eat anything, and they can’t even drink water.
+<sup>**7**</sup> Then he had a statement written out and publicly read throughout Nineveh: “By order of the king and his advisors: no people or animals, whether herds or flocks, may graze or eat anything, and they can’t even drink water.
 <sup>**8**</sup> People and animals alike must wear sackcloth, and everyone should use all their strength to cry out to God and turn away from the evil and violent things they’ve been doing.
 <sup>**9**</sup> Maybe God will turn around and change his mind and put away his fierce anger, and maybe we won’t die.”
 
@@ -106,14 +106,14 @@ A note on how this one is told: the narration and the crowd scenes are in the wa
 
 ### Yonah has a meltdown
 
-<sup>**1**</sup> But Yonah (Jonah) was beside himself, furious about the whole situation.
+<sup>**1**</sup> But Yonah (Jonah) was really upset and angry about the whole situation.
 <sup>**2**</sup> And he said to Yahweh, “Okay, Yahweh, isn’t this exactly what I said would happen when I was still in my own country? That’s why I ran away to Tarshish the first time: I knew that you’re a caring, forgiving god, slow to get angry, full of kindness, and not wanting to cause suffering. *(cf. Exo 34:6)*[^8]
 <sup>**3**</sup> So now, Yahweh, please kill me, because I’d rather die than live like this.” *(cf. 1Ki 19:4)*
 
 <sup>**4**</sup> But Yahweh said, “Do you really think it’s right to be this angry?”
 
 <sup>**5**</sup> And Yonah went outside the city to the east, made himself a shelter, and sat in its shade to see what would happen to the city.
-<sup>**6**</sup> Then Yahweh God commanded a plant to grow up over Yonah, to shade his head and ease his misery. Yonah was thrilled about the plant.[^9]
+<sup>**6**</sup> Then Yahweh God commanded a plant to grow up over Yonah, to shade his head and ease his misery. Yonah was thrilled about the plant. [^9]
 <sup>**7**</sup> Then at dawn the next day God commanded a grub, and it attacked the plant, which shriveled up.
 <sup>**8**</sup> And when the sun came up, God sent a scorching east wind and the sun beat down on Yonah’s head. He felt faint and asked for his life to end, saying, “It’s better for me to die than to live.”
 
